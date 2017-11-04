@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C8DDA61-806F-49C8-96FA-9C7EC6B4D624}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dbmodelexcel</RootNamespace>
+    <AssemblyName>dbmodelexcel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="05_Deployment\00_output\DB_Modeling_Excel\Tools\DBME_CopyToFile.vbs" />
+    <Content Include="05_Deployment\00_output\DB_Modeling_Excel\Tools\DBME_RunExcelMacro.vbs" />
+    <Content Include="05_Deployment\BuildScript\build.vbs" />
+    <Content Include="05_Deployment\BuildScript\Readme.txt" />
+    <Content Include="05_Deployment\BuildScript\runExcelMacro.vbs" />
+    <Content Include="05_Deployment\publish_steps.txt" />
+    <Content Include="05_Deployment\Resources\Tools\DBME_CopyToFile.vbs" />
+    <Content Include="05_Deployment\Resources\Tools\DBME_RunExcelMacro.vbs" />
+    <Content Include="screenshot_table.png" />
+    <Content Include="TestData\Test_Expect_DB2.sql" />
+    <Content Include="TestData\Test_Expect_MariaDB.sql" />
+    <Content Include="TestData\Test_Expect_MySQL.sql" />
+    <Content Include="TestData\Test_Expect_Oracle.sql" />
+    <Content Include="TestData\Test_Expect_PostgreSQL.sql" />
+    <Content Include="TestData\Test_Expect_SQLite.sql" />
+    <Content Include="TestData\Test_Expect_SQLServer.sql" />
+    <Content Include="TestData\Test_Target_DB2.sql" />
+    <Content Include="TestData\Test_Target_MariaDB.sql" />
+    <Content Include="TestData\Test_Target_MySQL.sql" />
+    <Content Include="TestData\Test_Target_Oracle.sql" />
+    <Content Include="TestData\Test_Target_PostgreSQL.sql" />
+    <Content Include="TestData\Test_Target_SQLite.sql" />
+    <Content Include="TestData\Test_Target_SQLServer.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_All_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_DB2_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_MariaDB_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_MySQL_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_Oracle_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_PostgreSQL_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_SQLite_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\DME_Template_SQLServer_7_0.xlsm" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\Doc\Help.docx" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel\Tools\Sample.bat" />
+    <None Include="05_Deployment\00_output\DB_Modeling_Excel_7_0_0.zip" />
+    <None Include="05_Deployment\Resources\Doc\Help.docx" />
+    <None Include="05_Deployment\Resources\Tools\Sample.bat" />
+    <None Include="App.config" />
+    <None Include="DME_Template_All_7_0.xlsm" />
+    <None Include="InitDBDemoData.xls" />
+    <None Include="Rules.xlsx" />
+    <None Include="TableData.xlsx" />
+    <None Include="TestData\Test Cases.xlsx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
